@@ -1,0 +1,82 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.projects {
+  background: $white;
+  
+  h1 {
+    margin-bottom: 3rem;
+    color: $text-color;
+  }
+  
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .project-item {
+    background: $white;
+    border-radius: 12px;
+    padding: 3rem;
+    @include card-shadow;
+    text-align: center;
+    
+    .project-title {
+      margin-bottom: 1.5rem;
+      color: $green-100;
+    }
+    
+    .project-description {
+      margin-bottom: 2rem;
+      color: $text-light;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .project-technologies {
+      margin-bottom: 2rem;
+      
+      .technologies-title {
+        margin-bottom: 1rem;
+        color: $text-color;
+      }
+      
+      .tech-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        
+        .tech-item {
+          background: $green-10;
+          color: $green-100;
+          padding: 0.5rem 1rem;
+          border-radius: 20px;
+          font-weight: 500;
+          font-size: 14px;
+        }
+      }
+    }
+    
+    .project-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      
+      .btn {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        
+        mat-icon {
+          font-size: 18px;
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.skills {
+  background: $skillset-bg;
+  
+  h1 {
+    margin-bottom: 3rem;
+    color: $text-color;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    background: $white;
+    border-radius: 12px;
+    @include card-shadow;
+    text-align: center;
+    
+    .skill-icon {
+      width: 60px;
+      height: 60px;
+      background: $green-100;
+      border-radius: 12px;
+      @include flex-center;
+      
+      mat-icon {
+        color: $white;
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+      }
+    }
+    
+    .skill-name {
+      font-weight: 600;
+      color: $text-color;
+    }
+    
+    &:last-child {
+      background: linear-gradient(135deg, $green-100, $green-50);
+      color: $white;
+      
+      .skill-icon {
+        background: $white;
+        
+        mat-icon {
+          color: $green-100;
+        }
+      }
+      
+      .skill-name {
+        color: $white;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<nav class="navbar" @slideIn>
+  <div class="container">
+    <div class="navbar-content">
+      <div class="logo">
+        <a routerLink="/" class="logo-link">&lt;YS&gt;</a>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a (click)="scrollToSection('why-me')" class="nav-link">{{ 'nav.whyMe' | translate }}</a></li>
+        <li><a (click)="scrollToSection('skills')" class="nav-link">{{ 'nav.skills' | translate }}</a></li>
+        <li><a (click)="scrollToSection('projects')" class="nav-link">{{ 'nav.projects' | translate }}</a></li>
+        <li><a (click)="scrollToSection('contact')" class="nav-link">{{ 'nav.contact' | translate }}</a></li>
+      </ul>
+      
+      <button mat-button class="lang-toggle" (click)="toggleLanguage()">
+        {{ currentLanguage.toUpperCase() }}
+        <mat-icon>language</mat-icon>
+      </button>
+    </div>
+  </div>
+</nav>

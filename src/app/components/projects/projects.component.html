@@ -1,0 +1,30 @@
+<section id="projects" class="projects section" @slideIn>
+  <div class="container">
+    <h1 class="h1 text-center">{{ 'projects.title' | translate }}</h1>
+    
+    <div class="projects-list">
+      <div class="project-item" *ngFor="let project of projects; trackBy: trackByProjectId">
+        <h1 class="project-title h3">{{ project.title }}</h1>
+        <p class="project-description paragraph">{{ project.description }}</p>
+        
+        <div class="project-technologies">
+          <h2 class="technologies-title h4">{{ 'projects.technologies' | translate }}:</h2>
+          <div class="tech-list">
+            <span class="tech-item" *ngFor="let tech of project.technologies">{{ tech }}</span>
+          </div>
+        </div>
+        
+        <div class="project-buttons">
+          <button mat-raised-button class="btn btn-outline" (click)="openLink(project.githubUrl)">
+            <mat-icon>code</mat-icon>
+            {{ 'projects.github' | translate }}
+          </button>
+          <button mat-raised-button color="primary" class="btn btn-primary" (click)="openLink(project.liveUrl)">
+            <mat-icon>launch</mat-icon>
+            {{ 'projects.liveTest' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

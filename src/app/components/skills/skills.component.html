@@ -1,0 +1,14 @@
+<section id="skills" class="skills section" @stagger>
+  <div class="container">
+    <h1 class="h1 text-center">{{ 'skills.title' | translate }}</h1>
+    
+    <div class="skills-grid">
+      <div class="skill-item" *ngFor="let skill of skills; trackBy: trackBySkillId">
+        <div class="skill-icon">
+          <mat-icon>{{ skill.icon }}</mat-icon>
+        </div>
+        <span class="skill-name h6">{{ skill.name }}</span>
+      </div>
+    </div>
+  </div>
+</section>

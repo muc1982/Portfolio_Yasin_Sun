@@ -1,0 +1,56 @@
+<section id="contact" class="contact section" @slideIn>
+  <div class="container">
+    <h1 class="h1 text-center">{{ 'contact.title' | translate }}</h1>
+    
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+      <div class="form-left">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>{{ 'contact.name' | translate }}</mat-label>
+          <input matInput formControlName="name" placeholder="{{ 'contact.namePlaceholder' | translate }}">
+          <mat-error *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+            {{ getErrorMessage('name') }}
+          </mat-error>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>{{ 'contact.email' | translate }}</mat-label>
+          <input matInput type="email" formControlName="email" placeholder="{{ 'contact.emailPlaceholder' | translate }}">
+          <mat-error *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+            {{ getErrorMessage('email') }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+      
+      <div class="form-right">
+        <mat-form-field appearance="outline" class="full-width full-height">
+          <mat-label>{{ 'contact.message' | translate }}</mat-label>
+          <textarea matInput formControlName="message" 
+                   placeholder="{{ 'contact.messagePlaceholder' | translate }}"
+                   rows="6"></textarea>
+          <mat-error *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+            {{ getErrorMessage('message') }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+      
+      <div class="form-footer">
+        <div class="privacy-section">
+          <mat-checkbox formControlName="privacyAccepted" color="primary">
+            {{ 'contact.privacyText' | translate }}
+            <a href="/privacy-policy" target="_blank" class="privacy-link">
+              {{ 'contact.privacyLink' | translate }}
+            </a>
+          </mat-checkbox>
+        </div>
+        
+        <button mat-raised-button color="primary" type="submit" 
+                [disabled]="!contactForm.valid || isSubmitting"
+                class="submit-button">
+          <mat-icon *ngIf="isSubmitting">hourglass_empty</mat-icon>
+          <mat-icon *ngIf="!isSubmitting">send</mat-icon>
+          {{ isSubmitting ? ('contact.sending' | translate) : ('contact.send' | translate) }}
+        </button>
+      </div>
+    </form>
+  </div>
+</section>

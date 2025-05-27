@@ -1,0 +1,65 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.testimonials {
+  background: $skillset-bg;
+  
+  h1 {
+    margin-bottom: 3rem;
+    color: $text-color;
+  }
+  
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  .testimonial-item {
+    background: $white;
+    padding: 2rem;
+    border-radius: 12px;
+    @include card-shadow;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    .testimonial-rating {
+      margin-bottom: 1rem;
+      
+      .star {
+        color: #ffd700;
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    
+    .testimonial-comment {
+      flex: 1;
+      color: $text-light;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    
+    .testimonial-author {
+      .author-name {
+        color: $text-color;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+      
+      .author-role {
+        color: $green-100;
+        font-weight: 500;
+      }
+    }
+  }
+}

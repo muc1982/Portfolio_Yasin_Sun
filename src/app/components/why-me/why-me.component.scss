@@ -1,0 +1,101 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.why-me {
+  background: $white;
+  
+  .why-me-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      text-align: center;
+    }
+  }
+
+  .why-me-image {
+    @include flex-center;
+    
+    .image-placeholder {
+      width: 300px;
+      height: 300px;
+      background: $green-10;
+      border-radius: 12px;
+      @include flex-center;
+      transition: transform 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+      
+      mat-icon {
+        font-size: 100px;
+        width: 100px;
+        height: 100px;
+        color: $green-100;
+      }
+      
+      @media (max-width: $mobile) {
+        width: 250px;
+        height: 250px;
+        
+        mat-icon {
+          font-size: 80px;
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+  }
+
+  .why-me-text {
+    text-align: right;
+    
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
+    
+    h1 {
+      margin-bottom: 1rem;
+      color: $text-color;
+    }
+    
+    h2 {
+      margin-bottom: 2rem;
+      color: $text-light;
+    }
+    
+    .location-info {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin: 2rem 0;
+      color: $text-light;
+      font-weight: 500;
+      
+      @media (max-width: $tablet) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      
+      @media (max-width: $mobile) {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      .arrow-icon {
+        color: $green-100;
+        font-size: 20px;
+        
+        @media (max-width: $mobile) {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.home-container {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+  scroll-behavior: smooth;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba($white, 0.95);
+  @include flex-center;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+  
+  .loading-spinner {
+    text-align: center;
+    
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 4px solid $green-10;
+      border-top: 4px solid $green-100;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1rem;
+    }
+    
+    p {
+      color: $text-light;
+      font-weight: 500;
+    }
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Scroll-to-Top Button
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: $green-100;
+  color: $white;
+  border: none;
+  border-radius: 50%;
+  @include flex-center;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba($green-100, 0.3);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  &:hover {
+    background: darken($green-100, 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba($green-100, 0.4);
+  }
+  
+  mat-icon {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+  }
+  
+  @media (max-width: $mobile) {
+    bottom: 1rem;
+    right: 1rem;
+    width: 45px;
+    height: 45px;
+    
+    mat-icon {
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+// Scroll-basierte Animationen (optional)
+.animate-in {
+  animation: slideInFromBottom 0.6s ease-out forwards;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Responsive Anpassungen
+@media (max-width: $tablet) {
+  .main-content {
+    // Auf Tablets etwas weniger Padding
+    section {
+      padding: 60px 0;
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .main-content {
+    // Auf Mobile noch weniger Padding
+    section {
+      padding: 40px 0;
+    }
+  }
+}
+
+// Performance Optimierungen
+.home-container {
+  // Hardware-Beschleunigung für smoother Scrolling
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  
+  // Verbesserte Scroll-Performance
+  -webkit-overflow-scrolling: touch;
+}
+
+// Dark Mode Support (optional für später)
+@media (prefers-color-scheme: dark) {
+  .loading-overlay {
+    background: rgba($text-color, 0.95);
+    
+    .loading-spinner p {
+      color: $white-80;
+    }
+  }
+}
+
+// Print Styles
+@media print {
+  .scroll-to-top,
+  .loading-overlay {
+    display: none !important;
+  }
+  
+  .main-content {
+    section {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+  }
+}
+
+// High Contrast Mode Support
+@media (prefers-contrast: high) {
+  .scroll-to-top {
+    border: 2px solid $text-color;
+  }
+}
+
+// Reduced Motion Support
+@media (prefers-reduced-motion: reduce) {
+  .home-container,
+  .main-content,
+  .scroll-to-top,
+  .loading-spinner .spinner {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  html {
+    scroll-behavior: auto !important;
+  }
+}

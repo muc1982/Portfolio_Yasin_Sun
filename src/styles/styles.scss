@@ -1,0 +1,72 @@
+@import 'variables';
+@import 'mixins';
+@import 'typography';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: $text-color;
+  overflow-x: hidden;
+}
+
+// Typography Classes
+.h1 { @include h1-style; }
+.h2 { @include h2-style; }
+.h3 { @include h3-style; }
+.h4 { @include h4-style; }
+.h5 { @include h5-style; }
+.paragraph { @include paragraph-style; }
+.h6 { @include h6-style; }
+.small-text { @include small-text-style; }
+
+// Button Classes  
+.btn {
+  @include button-base;
+  
+  &.btn-primary {
+    background: $green-100;
+    color: $white;
+    
+    &:hover {
+      background: darken($green-100, 10%);
+      transform: translateY(-2px);
+    }
+  }
+  
+  &.btn-outline {
+    background: transparent;
+    color: $green-100;
+    border: 2px solid $green-100;
+    
+    &:hover {
+      background: $green-100;
+      color: $white;
+    }
+  }
+}
+
+// Utility Classes
+.container {
+  @include container;
+}
+
+.section {
+  @include section-padding;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}

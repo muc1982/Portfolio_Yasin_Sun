@@ -1,0 +1,23 @@
+<section class="hero" @fadeIn>
+  <div class="hero-container">
+    <div class="hero-image" @slideIn>
+      <div class="image-placeholder">
+        <mat-icon>person</mat-icon>
+      </div>
+    </div>
+    
+    <div class="hero-vector" @slideIn>
+      <div class="vector-placeholder">
+        <mat-icon>code</mat-icon>
+      </div>
+    </div>
+    
+    <div class="hero-content" @slideIn>
+      <h1 class="h1">{{ 'hero.greeting' | translate }}</h1>
+      <h2 class="h2">{{ 'hero.subtitle' | translate }}</h2>
+      <button mat-raised-button color="primary" class="btn btn-primary" (click)="scrollToContact()">
+        {{ 'hero.contactButton' | translate }}
+      </button>
+    </div>
+  </div>
+</section>

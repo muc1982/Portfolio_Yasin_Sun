@@ -1,0 +1,37 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@mixin section-padding {
+  padding: $section-padding 0;
+}
+
+@mixin button-base {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+@mixin card-shadow {
+  box-shadow: 0 10px 30px $shadow-light;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px $shadow-medium;
+  }
+}

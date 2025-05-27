@@ -1,0 +1,15 @@
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+
+.contact {
+  background: $white;
+  
+  h1 {
+    margin-bottom: 3rem;
+    color: $text-color;
+  }
+  
+  .contact-form {
+    max-width: 800px;
+  }
+}
