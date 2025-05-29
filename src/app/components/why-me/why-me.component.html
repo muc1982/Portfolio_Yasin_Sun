@@ -1,74 +1,91 @@
-<section id="why-me" class="why-me">
+<section id="why-me" class="why-me-section">
     <div class="why-me-container">
-        <!-- Left Side - Profile Image -->
-        <div class="why-me-left">
-            <div class="profile-image">
-                <img src="assets/images/why-me-profile.jpg" alt="Marcus Schmidt" />
-            </div>
+        <!-- Left Side - Image -->
+        <div class="image-container">
+            <img src="assets/images/profile-casual.jpg" alt="Profile Image" class="profile-image">
         </div>
 
         <!-- Right Side - Content -->
-        <div class="why-me-right">
+        <div class="content-container">
             <!-- Title -->
-            <h2 class="why-me-title">Why me</h2>
+            <h2 class="section-title">Why me</h2>
 
             <!-- Description Text -->
-            <p class="why-me-description">
-                Write some information about yourself that is IT related. Maybe you are
-                passionate about coding? highlight your motivation for professional
-                growth and continuous learning. Explain your key
-                <br><br>
+            <p class="description-text">
+                Write some information about yourself that is IT related. Why are you
+                passionate about coding? Highlight your motivation for professional
+                growth and continuous learning. Emphasise your strong problem-solving
                 skills and passion for coding.
             </p>
 
-            <!-- I am Section -->
+            <!-- I am Section with Icons -->
             <div class="i-am-section">
                 <h3 class="i-am-title">I am</h3>
 
-                <div class="info-items">
-                    <!-- Location -->
-                    <div class="info-item">
-                        <div class="info-icon location">
-                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
-                                <path
-                                    d="M8 0C3.58 0 0 3.58 0 8C0 14 8 20 8 20S16 14 16 8C16 3.58 12.42 0 8 0ZM8 11C6.34 11 5 9.66 5 8S6.34 5 8 5S11 6.34 11 8S9.66 11 8 11Z"
-                                    fill="#00d9ff" />
-                            </svg>
-                        </div>
-                        <span class="info-text">located<br>in Munich</span>
+                <!-- Location Item -->
+                <div class="info-item location-item">
+                    <div class="icon-container location-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="#00d9ff" stroke-width="2"
+                                fill="#00d9ff" />
+                            <circle cx="12" cy="10" r="3" stroke="#0b042d" stroke-width="2" fill="#0b042d" />
+                        </svg>
                     </div>
+                    <span class="info-text">located in Munich</span>
+                    <!-- Curved Arrow pointing down-right -->
+                    <svg class="arrow-1" width="120" height="80" viewBox="0 0 120 80">
+                        <path d="M10 20 Q60 60 100 45" stroke="#ff6b35" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <path d="M95 40 L100 45 L95 50" stroke="#ff6b35" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
 
-                    <!-- Remote work -->
-                    <div class="info-item">
-                        <div class="info-icon remote">
-                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none">
-                                <path
-                                    d="M18 0H2C0.9 0 0 0.9 0 2V14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 14H2V4H18V14Z"
-                                    fill="#00d9ff" />
-                            </svg>
-                        </div>
-                        <span class="info-text">open to<br>relocate</span>
+                <!-- Remote Work Item -->
+                <div class="info-item remote-item">
+                    <div class="icon-container remote-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="4" width="20" height="16" rx="2" stroke="#00d9ff" stroke-width="2"
+                                fill="#00d9ff" />
+                            <rect x="6" y="8" width="12" height="8" rx="1" stroke="#0b042d" stroke-width="2"
+                                fill="#0b042d" />
+                        </svg>
                     </div>
+                    <span class="info-text">open to work remote</span>
+                    <!-- Curved Arrow pointing up-right -->
+                    <svg class="arrow-2" width="100" height="60" viewBox="0 0 100 60">
+                        <path d="M20 45 Q50 15 80 25" stroke="#ff6b35" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <path d="M75 20 L80 25 L75 30" stroke="#ff6b35" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                    </svg>
+                </div>
 
-                    <!-- Work remote -->
-                    <div class="info-item">
-                        <div class="info-icon work-remote">
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path
-                                    d="M10 0C4.48 0 0 4.48 0 10S4.48 20 10 20S20 15.52 20 10S15.52 0 10 0ZM10 18C5.59 18 2 14.41 2 10S5.59 2 10 2S18 5.59 18 10S14.41 18 10 18Z"
-                                    fill="#00d9ff" />
-                                <path d="M8 6H12V14H8V6Z" fill="#00d9ff" />
-                            </svg>
-                        </div>
-                        <span class="info-text">open to<br>work remote</span>
+                <!-- Relocate Item -->
+                <div class="info-item relocate-item">
+                    <div class="icon-container relocate-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="6" width="18" height="12" rx="2" stroke="#00d9ff" stroke-width="2"
+                                fill="#00d9ff" />
+                            <rect x="7" y="10" width="10" height="4" rx="1" stroke="#0b042d" stroke-width="1"
+                                fill="#0b042d" />
+                            <circle cx="6" cy="4" r="2" stroke="#00d9ff" stroke-width="2" fill="#00d9ff" />
+                            <circle cx="18" cy="4" r="2" stroke="#00d9ff" stroke-width="2" fill="#00d9ff" />
+                        </svg>
                     </div>
+                    <span class="info-text">open to relocate</span>
+                    <!-- Curved Arrow pointing down -->
+                    <svg class="arrow-3" width="80" height="100" viewBox="0 0 80 100">
+                        <path d="M40 15 Q15 50 35 85" stroke="#ff6b35" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                        <path d="M30 80 L35 85 L40 80" stroke="#ff6b35" stroke-width="3" fill="none"
+                            stroke-linecap="round" />
+                    </svg>
                 </div>
             </div>
 
             <!-- Let's talk Button -->
-            <button class="lets-talk-button" (click)="scrollToContact()">
-                Let's talk
-            </button>
+            <button class="lets-talk-btn">Let's talk</button>
         </div>
     </div>
 </section>

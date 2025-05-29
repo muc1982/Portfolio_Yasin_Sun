@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Handjet:wght@400&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
-$primary-bg: rgba(18, 11, 53, 1);
+$primary-bg: #0b042d;
 $secondary-bg: #2d2a5a;
 $accent-orange: #E15544;
 $accent-cyan: #02F4BF;
@@ -28,7 +28,7 @@ $desktop: 1200px;
 html, body {
   line-height: 1.6;
   color: $text-primary;
-  background: rgba(18, 11, 53, 1);
+  background: #0b042d;
   min-height: 100vh;
   overflow-x: hidden;
 }

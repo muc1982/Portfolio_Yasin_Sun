@@ -1,5 +1,5 @@
 .hero {
-  background: #1e1b4b;
+  background: #0b042d;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -59,8 +59,8 @@
       white-space: nowrap;
       color: #E15544;
       align-self: flex-start;
-      width: 60px; // Feste Breite wie im Bild
-      height: 140px; // Feste Höhe wie im Bild
+      width: 52px;
+      height: 169px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -75,13 +75,12 @@
       }
 
       &:hover {
-        background: rgba(225, 85, 68, 0.1);
-        transform: translateY(-3px);
+        border: 2px solid #02F4BF;
+        ;
       }
     }
   }
 
-  // Main Text Content - unter dem Button
   .hero-content-area {
     display: flex;
     flex-direction: column;
@@ -99,8 +98,6 @@
       font-weight: 500;
       font-size: 54px;
       line-height: 120%;
-      letter-spacing: 0%;
-      margin-bottom: 1rem;
 
       @media (max-width: 768px) {
         font-size: 36px;
@@ -118,7 +115,6 @@
       font-weight: 700;
       font-size: 82px;
       line-height: 120%;
-      letter-spacing: 0%;
 
       @media (max-width: 768px) {
         font-size: 56px;
@@ -130,14 +126,34 @@
     }
   }
 
-  // Pfeil - zwischen links und rechts, angepasste Position
   .hero-arrow {
     position: absolute;
-    top: 40%; // Höher positioniert, da Bild jetzt niedriger ist
-    left: 55%; // Weiter rechts wie im Bild
-    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 42%;
     animation: bounce 2s infinite;
     z-index: 2;
+    cursor: pointer;
+    transition: all 0.3s ease; // Smooth transition
+
+    svg {
+      transition: all 0.3s ease;
+
+      path {
+        transition: stroke 0.3s ease;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.1); // Leicht vergrößern
+
+      svg {
+        filter: drop-shadow(0 0 15px rgba(2, 244, 191, 0.7)); // Glow-Effekt
+
+        path {
+          stroke: #02F4BF !important;
+        }
+      }
+    }
 
     @media (max-width: 1024px) {
       position: relative;
@@ -147,20 +163,12 @@
       order: 3;
       margin: 2rem 0;
     }
-
-    svg {
-      filter: drop-shadow(0 0 10px rgba(225, 85, 68, 0.5)); // Orange Glow wie im Bild
-      stroke: #E15544; // Orange Farbe wie im Bild
-      width: 20px;
-      height: 50px;
-    }
   }
 
-  // Profilbild - rechts, auf Höhe des Textes
   .hero-right {
     display: flex;
-    justify-content: flex-end; // Am rechten Rand wie im Bild
-    align-items: flex-start; // Oben ausgerichtet
+    justify-content: flex-end; 
+    align-items: flex-start; 
 
     @media (max-width: 1024px) {
       justify-content: center;
@@ -170,7 +178,7 @@
 
     .profile-image {
       width: 539px;
-      height: 554px;
+      height: 380px;
       border-radius: 12px;
       overflow: hidden;
       position: relative;
