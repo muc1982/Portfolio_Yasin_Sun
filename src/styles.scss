@@ -1,0 +1,190 @@
+// ===== STYLES.SCSS - DIREKT IM SRC ORDNER =====
+// Datei: src/styles.scss (NICHT src/styles/styles.scss!)
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+// ===== VARIABLES =====
+$primary-bg: #1e1b4b;
+$secondary-bg: #2d2a5a;
+$accent-orange: #ff6b35;
+$accent-cyan: #00d9ff;
+$text-primary: rgba(255, 255, 255, 0.9);
+$text-secondary: rgba(255, 255, 255, 0.7);
+$text-light: rgba(255, 255, 255, 0.6);
+
+// Breakpoints
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1200px;
+
+// ===== GLOBAL RESET =====
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// ===== BODY & HTML =====
+html, body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: $text-primary;
+  background: $primary-bg;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+// ===== TYPOGRAPHY =====
+h1, .h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: $text-primary;
+  
+  @media (max-width: $mobile) {
+    font-size: 2rem;
+  }
+}
+
+h2, .h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: $text-primary;
+  
+  @media (max-width: $mobile) {
+    font-size: 1.8rem;
+  }
+}
+
+h3, .h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: $text-primary;
+  
+  @media (max-width: $mobile) {
+    font-size: 1.5rem;
+  }
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: $text-primary;
+}
+
+h5, .h5 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: $text-primary;
+}
+
+p, .paragraph {
+  font-size: 1rem;
+  color: $text-secondary;
+  line-height: 1.6;
+}
+
+.small-text {
+  font-size: 0.875rem;
+  color: $text-light;
+}
+
+// ===== BUTTONS =====
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  
+  &.btn-primary {
+    background: $accent-cyan;
+    color: $primary-bg;
+    
+    &:hover {
+      background: darken($accent-cyan, 10%);
+      transform: translateY(-2px);
+    }
+  }
+  
+  &.btn-outline {
+    background: transparent;
+    color: $accent-cyan;
+    border: 2px solid $accent-cyan;
+    
+    &:hover {
+      background: $accent-cyan;
+      color: $primary-bg;
+    }
+  }
+}
+
+// ===== UTILITY CLASSES =====
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// ===== LINKS =====
+a {
+  color: $accent-cyan;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: lighten($accent-cyan, 10%);
+  }
+}
+
+// ===== FORM ELEMENTS =====
+input, textarea, select {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: $text-primary;
+  padding: 12px;
+  border-radius: 6px;
+  
+  &:focus {
+    outline: none;
+    border-color: $accent-cyan;
+  }
+  
+  &::placeholder {
+    color: $text-light;
+  }
+}
+
+// ===== SCROLLBAR STYLING =====
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $secondary-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $accent-cyan;
+  border-radius: 4px;
+  
+  &:hover {
+    background: lighten($accent-cyan, 10%);
+  }
+}

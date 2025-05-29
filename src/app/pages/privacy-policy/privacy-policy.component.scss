@@ -1,57 +1,149 @@
-// Datei: src/app/pages/privacy-policy/privacy-policy.component.scss
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
-
-.privacy-policy {
+.legal-page {
+  background: #1e1b4b;
   min-height: 100vh;
-  padding-top: 80px;
-  background: $white;
+  padding: 100px 0 60px;
   
-  .content-wrapper {
-    @include container;
-    @include section-padding;
+  .legal-container {
     max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
   }
   
-  .back-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-    color: $green-100;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border: 1px solid $green-100;
-    border-radius: 6px;
-    background: transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  .legal-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ff6b35;
+    margin-bottom: 1rem;
+    text-align: center;
     
-    &:hover {
-      background: $green-100;
-      color: $white;
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 2rem;
     }
   }
   
-  h1 {
+  .last-updated {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
     margin-bottom: 3rem;
-    color: $text-color;
   }
   
-  .privacy-content {
-    .privacy-section {
-      margin-bottom: 3rem;
+  .legal-section {
+    margin-bottom: 3rem;
+    
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #00d9ff;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba(0, 217, 255, 0.3);
       
-      h2 {
-        margin-bottom: 1.5rem;
-        color: $green-100;
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+    
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #ff6b35;
+      margin: 2rem 0 1rem 0;
+      
+      @media (max-width: 768px) {
+        font-size: 1.2rem;
+      }
+    }
+    
+    h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+      margin: 1.5rem 0 0.8rem 0;
+    }
+    
+    p {
+      margin-bottom: 1rem;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.8);
+      
+      @media (max-width: 768px) {
+        font-size: 15px;
+      }
+    }
+    
+    ul {
+      margin: 1rem 0;
+      padding-left: 2rem;
+      color: rgba(255, 255, 255, 0.8);
+      
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 16px;
+        
+        @media (max-width: 768px) {
+          font-size: 15px;
+        }
+      }
+    }
+    
+    a {
+      color: #00d9ff;
+      text-decoration: underline;
+      
+      &:hover {
+        color: #00c4e6;
+      }
+    }
+  }
+  
+  .contact-info {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #00d9ff;
+    margin: 1rem 0;
+    
+    p {
+      margin-bottom: 0.5rem;
+      color: rgba(255, 255, 255, 0.8);
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
+    strong {
+      color: #ff6b35;
+    }
+  }
+  
+  .back-button-section {
+    text-align: center;
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    
+    .back-button {
+      background: #00d9ff !important;
+      color: #1e1b4b !important;
+      font-weight: 600;
+      padding: 0 2rem;
+      
+      &:hover {
+        background: #00c4e6 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 217, 255, 0.4);
       }
       
-      p {
-        margin-bottom: 1rem;
-        color: $text-light;
-        line-height: 1.8;
+      mat-icon {
+        margin-right: 0.5rem;
       }
     }
   }
