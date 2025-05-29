@@ -1,23 +1,30 @@
-<section class="hero" @fadeIn>
+<section class="hero">
   <div class="hero-container">
-    <div class="hero-image" @slideIn>
-      <div class="image-placeholder">
-        <mat-icon>person</mat-icon>
-      </div>
-    </div>
-    
-    <div class="hero-vector" @slideIn>
-      <div class="vector-placeholder">
-        <mat-icon>code</mat-icon>
-      </div>
-    </div>
-    
-    <div class="hero-content" @slideIn>
-      <h1 class="h1">{{ 'hero.greeting' | translate }}</h1>
-      <h2 class="h2">{{ 'hero.subtitle' | translate }}</h2>
-      <button mat-raised-button color="primary" class="btn btn-primary" (click)="scrollToContact()">
-        {{ 'hero.contactButton' | translate }}
+    <!-- Left Side - Contact Button (ganz links, vertikal) -->
+    <div class="hero-left">
+      <button class="contact-button" (click)="scrollToContact()">
+        CONTACT ME
       </button>
+    </div>
+    
+    <!-- Center-Left - Main Text Content -->
+    <div class="hero-content-area">
+      <h1 class="hero-title">FRONTEND DEVELOPER</h1>
+      <h2 class="hero-name">Marcus Schmidt</h2>
+    </div>
+    
+    <!-- Center - Arrow -->
+    <div class="hero-arrow">
+      <svg width="24" height="60" viewBox="0 0 24 60" fill="none">
+        <path d="M12 5L12 50M12 50L6 44M12 50L18 44" stroke="#00d9ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    
+    <!-- Right Side - Profile Image -->
+    <div class="hero-right">
+      <div class="profile-image">
+        <img src="assets/images/profile.jpg" alt="Marcus Schmidt" />
+      </div>
     </div>
   </div>
 </section>

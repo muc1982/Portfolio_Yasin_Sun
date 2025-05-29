@@ -1,14 +1,108 @@
-<section id="skills" class="skills section" @stagger>
-  <div class="container">
-    <h1 class="h1 text-center">{{ 'skills.title' | translate }}</h1>
-    
+<section id="skills" class="skills">
+  <div class="skills-container">
+    <!-- Title -->
+    <h2 class="skills-title">My Skills</h2>
+
+    <!-- Skills Grid -->
     <div class="skills-grid">
-      <div class="skill-item" *ngFor="let skill of skills; trackBy: trackBySkillId">
-        <div class="skill-icon">
-          <mat-icon>{{ skill.icon }}</mat-icon>
+      <!-- Row 1 -->
+      <div class="skill-item">
+        <div class="skill-icon angular">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <path d="M24 4L6 10L8 32L24 44L40 32L42 10L24 4Z" fill="#00d9ff" />
+            <path d="M24 4V44L40 32L42 10L24 4Z" fill="#00b8d4" />
+            <path d="M24 8L16 30H20L22 24H26L28 30H32L24 8Z" fill="#fff" />
+          </svg>
         </div>
-        <span class="skill-name h6">{{ skill.name }}</span>
+        <span class="skill-name">Angular</span>
       </div>
+
+      <div class="skill-item">
+        <div class="skill-icon typescript">
+          <div class="ts-box">TS</div>
+        </div>
+        <span class="skill-name">TypeScript</span>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-icon javascript">
+          <div class="js-box">JS</div>
+        </div>
+        <span class="skill-name">JavaScript</span>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-icon html">
+          <div class="html-box">5</div>
+        </div>
+        <span class="skill-name">HTML</span>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-icon css">
+          <div class="css-box">3</div>
+        </div>
+        <span class="skill-name">CSS</span>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-icon api">
+          <div class="api-box">API</div>
+        </div>
+        <span class="skill-name">Rest-Api</span>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="skill-item">
+        <div class="skill-icon firebase">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <path d="M8 36L24 20L16 4L8 36Z" fill="#00d9ff" />
+            <path d="M24 20L40 36L32 8L24 20Z" fill="#00d9ff" />
+            <path d="M8 36L24 44L40 36L24 20L8 36Z" fill="#00b8d4" />
+          </svg>
+        </div>
+        <span class="skill-name">Firebase</span>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-icon git">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <path d="M24 4L4 24L24 44L44 24L24 4Z" fill="#00d9ff" />
+            <path d="M18 24L24 18L30 24L24 30L18 24Z" fill="#fff" />
+          </svg>
+        </div>
+        <span class="skill-name">GIT</span>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-icon scrum">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="20" fill="#00d9ff" />
+            <path d="M16 20L24 28L32 20" stroke="#fff" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <span class="skill-name">Scrum</span>
+      </div>
+
+      <div class="skill-item">
+        <div class="skill-icon material">
+          <div class="material-box">M</div>
+        </div>
+        <span class="skill-name">Material<br>design</span>
+      </div>
+
+      <div class="skill-item challenge">
+        <div class="skill-icon challenge-icon">
+          <div class="challenge-box">?</div>
+        </div>
+        <span class="skill-name">Challenge<br>me</span>
+      </div>
+    </div>
+
+    <!-- Bottom Text -->
+    <div class="skills-bottom-text">
+      <p>I am always happy to learn new technologies, just tell me what you need.</p>
     </div>
   </div>
 </section>

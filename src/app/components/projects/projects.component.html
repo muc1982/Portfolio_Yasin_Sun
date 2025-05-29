@@ -1,30 +1,68 @@
-<section id="projects" class="projects section" @slideIn>
-  <div class="container">
-    <h1 class="h1 text-center">{{ 'projects.title' | translate }}</h1>
-    
+<section id="projects" class="projects">
+  <div class="projects-container">
+    <!-- Title -->
+    <h2 class="projects-title">My Projects</h2>
+
+    <!-- Projects List -->
     <div class="projects-list">
-      <div class="project-item" *ngFor="let project of projects; trackBy: trackByProjectId">
-        <h1 class="project-title h3">{{ project.title }}</h1>
-        <p class="project-description paragraph">{{ project.description }}</p>
-        
-        <div class="project-technologies">
-          <h2 class="technologies-title h4">{{ 'projects.technologies' | translate }}:</h2>
-          <div class="tech-list">
-            <span class="tech-item" *ngFor="let tech of project.technologies">{{ tech }}</span>
+
+      <!-- Project 1: Join -->
+      <div class="project-item">
+        <div class="project-image">
+          <img src="assets/images/project-join.jpg" alt="Join Project" />
+        </div>
+        <div class="project-content">
+          <h3 class="project-name">Join</h3>
+          <div class="project-technologies">
+            <span class="tech-tag">Angular</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">Firebase</span>
+          </div>
+          <p class="project-description">
+            Task manager inspired by the Kanban System.
+            Create and organize tasks using drag and drop
+            functions, assign users and categories.
+          </p>
+          <div class="project-buttons">
+            <button class="btn-github" (click)="openLink('https://github.com/yasin/join')">
+              GitHub
+            </button>
+            <button class="btn-live" (click)="openLink('https://join-yasin.web.app')">
+              Live Test
+            </button>
           </div>
         </div>
-        
-        <div class="project-buttons">
-          <button mat-raised-button class="btn btn-outline" (click)="openLink(project.githubUrl)">
-            <mat-icon>code</mat-icon>
-            {{ 'projects.github' | translate }}
-          </button>
-          <button mat-raised-button color="primary" class="btn btn-primary" (click)="openLink(project.liveUrl)">
-            <mat-icon>launch</mat-icon>
-            {{ 'projects.liveTest' | translate }}
-          </button>
+      </div>
+
+      <!-- Project 2: Pollo Loco - Rechtsbündig -->
+      <div class="project-item reverse">
+        <div class="project-content">
+          <h3 class="project-name">Pollo Loco</h3>
+          <div class="project-technologies">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+          </div>
+          <p class="project-description">
+            Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to
+            fight against the crazy hen.
+          </p>
+          <div class="project-buttons">
+            <button class="btn-github" (click)="openLink('https://github.com/yasin/pollo-loco')">
+              GitHub
+            </button>
+            <button class="btn-live" (click)="openLink('https://pollo-loco-yasin.web.app')">
+              Live Test
+            </button>
+          </div>
+        </div>
+        <div class="project-image">
+          <img src="assets/images/project-pollo-loco.jpg" alt="Pollo Loco Project" />
         </div>
       </div>
+
     </div>
   </div>
 </section>

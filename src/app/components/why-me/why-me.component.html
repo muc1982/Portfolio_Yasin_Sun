@@ -1,1 +1,74 @@
-<p>why-me works!</p>
+<section id="why-me" class="why-me">
+    <div class="why-me-container">
+        <!-- Left Side - Profile Image -->
+        <div class="why-me-left">
+            <div class="profile-image">
+                <img src="assets/images/why-me-profile.jpg" alt="Marcus Schmidt" />
+            </div>
+        </div>
+
+        <!-- Right Side - Content -->
+        <div class="why-me-right">
+            <!-- Title -->
+            <h2 class="why-me-title">Why me</h2>
+
+            <!-- Description Text -->
+            <p class="why-me-description">
+                Write some information about yourself that is IT related. Maybe you are
+                passionate about coding? highlight your motivation for professional
+                growth and continuous learning. Explain your key
+                <br><br>
+                skills and passion for coding.
+            </p>
+
+            <!-- I am Section -->
+            <div class="i-am-section">
+                <h3 class="i-am-title">I am</h3>
+
+                <div class="info-items">
+                    <!-- Location -->
+                    <div class="info-item">
+                        <div class="info-icon location">
+                            <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8C0 14 8 20 8 20S16 14 16 8C16 3.58 12.42 0 8 0ZM8 11C6.34 11 5 9.66 5 8S6.34 5 8 5S11 6.34 11 8S9.66 11 8 11Z"
+                                    fill="#00d9ff" />
+                            </svg>
+                        </div>
+                        <span class="info-text">located<br>in Munich</span>
+                    </div>
+
+                    <!-- Remote work -->
+                    <div class="info-item">
+                        <div class="info-icon remote">
+                            <svg width="20" height="16" viewBox="0 0 20 16" fill="none">
+                                <path
+                                    d="M18 0H2C0.9 0 0 0.9 0 2V14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 14H2V4H18V14Z"
+                                    fill="#00d9ff" />
+                            </svg>
+                        </div>
+                        <span class="info-text">open to<br>relocate</span>
+                    </div>
+
+                    <!-- Work remote -->
+                    <div class="info-item">
+                        <div class="info-icon work-remote">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path
+                                    d="M10 0C4.48 0 0 4.48 0 10S4.48 20 10 20S20 15.52 20 10S15.52 0 10 0ZM10 18C5.59 18 2 14.41 2 10S5.59 2 10 2S18 5.59 18 10S14.41 18 10 18Z"
+                                    fill="#00d9ff" />
+                                <path d="M8 6H12V14H8V6Z" fill="#00d9ff" />
+                            </svg>
+                        </div>
+                        <span class="info-text">open to<br>work remote</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Let's talk Button -->
+            <button class="lets-talk-button" (click)="scrollToContact()">
+                Let's talk
+            </button>
+        </div>
+    </div>
+</section>

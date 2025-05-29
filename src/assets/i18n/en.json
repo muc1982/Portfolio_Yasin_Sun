@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "whyMe": "Why me",
+    "skills": "Skills",
+    "projects": "Projects", 
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "FRONTEND DEVELOPER",
+    "subtitle": "Marcus Schmidt",
+    "contactButton": "CONTACT ME"
+  },
+  "whyMe": {
+    "title": "Why me",
+    "description": "Write some information about yourself that is IT related. Maybe you are passionate about coding? Highlight your motivation for professional growth and continuous learning. Explain your key skills and passion for coding.",
+    "iAm": "I am",
+    "located": "located",
+    "inMunich": "in Munich", 
+    "openTo": "open to",
+    "relocate": "relocate",
+    "workRemote": "work remote",
+    "letsTalk": "Let's talk"
+  },
+  "skills": {
+    "title": "My Skills",
+    "bottomText": "I am always happy to learn new technologies, just tell me what you need."
+  },
+  "projects": {
+    "title": "My Projects",
+    "join": {
+      "title": "Join",
+      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+    "polloLoco": {
+      "title": "Pollo Loco", 
+      "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+    },
+    "technologies": "Technologies",
+    "github": "GitHub",
+    "liveTest": "Live Test"
+  },
+  "testimonials": {
+    "title": "Need a teamplayer? Here what my colleagues said about me",
+    "noah": {
+      "name": "Noah Mueller",
+      "project": "Project Sharkie",
+      "quote": "Marcus had IQ develop, format and deliver content in collaboration with the team members.He is a reliable and friendly person."
+    },
+    "evelyn": {
+      "name": "Evelyn Marx",
+      "project": "Project Pollo Loco", 
+      "quote": "He is a trustworthy teammate and can cope with the stress of deadlines. Structured work and clear code."
+    },
+    "james": {
+      "name": "James Rugman",
+      "project": "Project Join",
+      "quote": "He is a reliable and friendly person. Work is structured way and write a clear code. I recommend him as a colleague."
+    }
+  },
+  "contact": {
+    "title": "Contact me",
+    "subtitle": "Encourage people to contact you and describe what role you are interested in. Express interest in contributing to a new project.",
+    "name": "Your Name",
+    "namePlaceholder": "Your Name",
+    "email": "Your Email",
+    "emailPlaceholder": "Your Email", 
+    "message": "Your Message",
+    "messagePlaceholder": "Your Message",
+    "privacyText": "I've read the privacy policy and agree to the processing of my data as outlined.",
+    "privacyLink": "privacy policy",
+    "send": "Send",
+    "sending": "Sending...",
+    "emailLabel": "E-mail: mustermail@gmail.com",
+    "phoneLabel": "Tel: 0157 123 456 68"
+  },
+  "footer": {
+    "developer": "Frontend developer",
+    "copyright": "© Marcus Schmidt 2024", 
+    "legalNotice": "Legal notice",
+    "privacyPolicy": "Privacy policy"
+  }
+}

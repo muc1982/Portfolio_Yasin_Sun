@@ -1,24 +1,47 @@
-@import '../../../styles/variables';
-@import '../../../styles/mixins';
-
 .skills {
-  background: $skillset-bg;
-  
-  h1 {
-    margin-bottom: 3rem;
-    color: $text-color;
+  background: #1e1b4b;
+  padding: 100px 0;
+
+  .skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
   }
-  
+
+  .skills-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ff6b35;
+    margin-bottom: 4rem;
+    text-align: left;
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2rem;
+    }
+  }
+
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 2rem;
-    
-    @media (max-width: $tablet) {
-      grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 4rem;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
     }
-    
-    @media (max-width: $mobile) {
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
     }
@@ -29,47 +52,131 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: 2rem 1rem;
-    background: $white;
-    border-radius: 12px;
-    @include card-shadow;
-    text-align: center;
-    
-    .skill-icon {
-      width: 60px;
-      height: 60px;
-      background: $green-100;
-      border-radius: 12px;
-      @include flex-center;
-      
-      mat-icon {
-        color: $white;
-        font-size: 24px;
-        width: 24px;
-        height: 24px;
-      }
-    }
-    
-    .skill-name {
-      font-weight: 600;
-      color: $text-color;
-    }
-    
-    &:last-child {
-      background: linear-gradient(135deg, $green-100, $green-50);
-      color: $white;
-      
+
+    &.challenge {
       .skill-icon {
-        background: $white;
-        
-        mat-icon {
-          color: $green-100;
+        background: #ff6b35;
+
+        .challenge-box {
+          background: #ff6b35;
+          color: #fff;
         }
       }
-      
+
       .skill-name {
-        color: $white;
+        color: #ff6b35;
+        font-weight: 600;
+      }
+    }
+
+    .skill-icon {
+      width: 80px;
+      height: 80px;
+      background: #00d9ff;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      @media (max-width: 768px) {
+        width: 70px;
+        height: 70px;
+      }
+
+      @media (max-width: 480px) {
+        width: 60px;
+        height: 60px;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 217, 255, 0.4);
+      }
+
+      svg {
+        width: 48px;
+        height: 48px;
+
+        @media (max-width: 768px) {
+          width: 40px;
+          height: 40px;
+        }
+
+        @media (max-width: 480px) {
+          width: 36px;
+          height: 36px;
+        }
+      }
+
+      // Text-based icons
+      .ts-box,
+      .js-box,
+      .html-box,
+      .css-box,
+      .api-box,
+      .material-box,
+      .challenge-box {
+        background: #00d9ff;
+        color: #fff;
+        font-size: 24px;
         font-weight: 700;
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 768px) {
+          width: 50px;
+          height: 50px;
+          font-size: 20px;
+        }
+
+        @media (max-width: 480px) {
+          width: 45px;
+          height: 45px;
+          font-size: 18px;
+        }
+      }
+
+      .challenge-box {
+        background: #fff;
+        color: #ff6b35;
+      }
+    }
+
+    .skill-name {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+      line-height: 1.3;
+
+      @media (max-width: 480px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .skills-bottom-text {
+    text-align: right;
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 16px;
+      font-style: italic;
+      max-width: 400px;
+      margin-left: auto;
+
+      @media (max-width: 768px) {
+        margin: 0 auto;
+        font-size: 14px;
       }
     }
   }

@@ -1,21 +1,23 @@
-<nav class="navbar" @slideIn>
-  <div class="container">
-    <div class="navbar-content">
-      <div class="logo">
-        <a routerLink="/" class="logo-link">&lt;YS&gt;</a>
-      </div>
-      
-      <ul class="nav-links">
-        <li><a (click)="scrollToSection('why-me')" class="nav-link">{{ 'nav.whyMe' | translate }}</a></li>
-        <li><a (click)="scrollToSection('skills')" class="nav-link">{{ 'nav.skills' | translate }}</a></li>
-        <li><a (click)="scrollToSection('projects')" class="nav-link">{{ 'nav.projects' | translate }}</a></li>
-        <li><a (click)="scrollToSection('contact')" class="nav-link">{{ 'nav.contact' | translate }}</a></li>
-      </ul>
-      
-      <button mat-button class="lang-toggle" (click)="toggleLanguage()">
-        {{ currentLanguage.toUpperCase() }}
-        <mat-icon>language</mat-icon>
-      </button>
+<nav class="navbar">
+  <div class="navbar-container">
+    <!-- Logo - Links -->
+    <div class="logo">
+      <a routerLink="/" class="logo-link">&lt;YS&gt;</a>
+    </div>
+
+    <!-- Navigation Links - Mitte -->
+    <ul class="nav-links">
+      <li><a (click)="scrollToSection('why-me')" class="nav-link">Why me</a></li>
+      <li><a (click)="scrollToSection('skills')" class="nav-link">Skills</a></li>
+      <li><a (click)="scrollToSection('projects')" class="nav-link">Projects</a></li>
+      <li><a (click)="scrollToSection('contact')" class="nav-link">Contact</a></li>
+    </ul>
+
+    <!-- Language Toggle - Rechts -->
+    <div class="language-toggle">
+      <span [class.active]="currentLanguage === 'de'" (click)="setLanguage('de')" class="lang-option">DE</span>
+      <span class="separator">|</span>
+      <span [class.active]="currentLanguage === 'en'" (click)="setLanguage('en')" class="lang-option">EN</span>
     </div>
   </div>
 </nav>

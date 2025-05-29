@@ -1,0 +1,209 @@
+.footer {
+  background: #1e1b4b;
+  padding: 40px 0 30px;
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 2rem;
+    
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2rem;
+    }
+  }
+  
+  // Left - Logo Section
+  .footer-left {
+    justify-self: start;
+    
+    @media (max-width: 1024px) {
+      justify-self: center;
+      order: 1;
+    }
+    
+    .logo-section {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.3rem;
+      
+      @media (max-width: 1024px) {
+        align-items: center;
+      }
+      
+      .logo {
+        font-size: 24px;
+        font-weight: 700;
+        color: #ff6b35;
+        font-family: 'Courier New', monospace;
+        letter-spacing: 1px;
+        line-height: 1;
+      }
+      
+      .logo-subtitle {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.6);
+        text-transform: lowercase;
+        letter-spacing: 0.5px;
+        line-height: 1;
+        
+        @media (max-width: 768px) {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  
+  // Center - Copyright + Legal Links
+  .footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-self: center;
+    
+    @media (max-width: 1024px) {
+      order: 3;
+    }
+    
+    .copyright-text {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      margin: 0;
+      font-weight: 400;
+      
+      @media (max-width: 768px) {
+        font-size: 13px;
+      }
+    }
+    
+    .legal-links {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      
+      .legal-link {
+        color: rgba(255, 255, 255, 0.5) !important;
+        font-size: 12px;
+        min-width: auto;
+        padding: 4px 8px;
+        height: auto;
+        line-height: 1.2;
+        text-transform: lowercase;
+        
+        &:hover {
+          color: #00d9ff !important;
+          background: rgba(0, 217, 255, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+          font-size: 11px;
+          padding: 2px 6px;
+        }
+      }
+      
+      .separator {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 12px;
+        margin: 0 0.2rem;
+      }
+    }
+  }
+  
+  // Right - Social Icons
+  .footer-right {
+    justify-self: end;
+    
+    @media (max-width: 1024px) {
+      justify-self: center;
+      order: 2;
+    }
+    
+    .social-buttons {
+      display: flex;
+      gap: 0.8rem;
+      
+      .social-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        
+        @media (max-width: 768px) {
+          width: 36px;
+          height: 36px;
+        }
+        
+        .custom-icon {
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+          
+          @media (max-width: 768px) {
+            font-size: 18px;
+            width: 18px;
+            height: 18px;
+          }
+        }
+        
+        &.github {
+          background: rgba(255, 107, 53, 0.05);
+          color: #ff6b35;
+          border-color: rgba(255, 107, 53, 0.2);
+          
+          &:hover {
+            background: rgba(255, 107, 53, 0.15);
+            border-color: rgba(255, 107, 53, 0.4);
+            transform: translateY(-2px);
+          }
+        }
+        
+        &.youtube {
+          background: rgba(255, 107, 53, 0.05);
+          color: #ff6b35;
+          border-color: rgba(255, 107, 53, 0.2);
+          
+          &:hover {
+            background: rgba(255, 107, 53, 0.15);
+            border-color: rgba(255, 107, 53, 0.4);
+            transform: translateY(-2px);
+          }
+        }
+        
+        &.linkedin {
+          background: rgba(0, 217, 255, 0.05);
+          color: #00d9ff;
+          border-color: rgba(0, 217, 255, 0.2);
+          
+          &:hover {
+            background: rgba(0, 217, 255, 0.15);
+            border-color: rgba(0, 217, 255, 0.4);
+            transform: translateY(-2px);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Angular Material overrides
+::ng-deep .footer {
+  .mat-mdc-icon-button {
+    --mdc-icon-button-state-layer-size: 40px;
+  }
+  
+  .mat-mdc-button {
+    --mdc-text-button-label-text-size: 12px;
+    --mdc-text-button-container-height: auto;
+  }
+}

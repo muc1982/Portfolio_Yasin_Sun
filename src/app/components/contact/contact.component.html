@@ -1,56 +1,126 @@
-<section id="contact" class="contact section" @slideIn>
-  <div class="container">
-    <h1 class="h1 text-center">{{ 'contact.title' | translate }}</h1>
-    
-    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
-      <div class="form-left">
-        <mat-form-field appearance="outline" class="full-width">
-          <mat-label>{{ 'contact.name' | translate }}</mat-label>
-          <input matInput formControlName="name" placeholder="{{ 'contact.namePlaceholder' | translate }}">
-          <mat-error *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
-            {{ getErrorMessage('name') }}
-          </mat-error>
-        </mat-form-field>
-        
-        <mat-form-field appearance="outline" class="full-width">
-          <mat-label>{{ 'contact.email' | translate }}</mat-label>
-          <input matInput type="email" formControlName="email" placeholder="{{ 'contact.emailPlaceholder' | translate }}">
-          <mat-error *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
-            {{ getErrorMessage('email') }}
-          </mat-error>
-        </mat-form-field>
-      </div>
-      
-      <div class="form-right">
-        <mat-form-field appearance="outline" class="full-width full-height">
-          <mat-label>{{ 'contact.message' | translate }}</mat-label>
-          <textarea matInput formControlName="message" 
-                   placeholder="{{ 'contact.messagePlaceholder' | translate }}"
-                   rows="6"></textarea>
-          <mat-error *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
-            {{ getErrorMessage('message') }}
-          </mat-error>
-        </mat-form-field>
-      </div>
-      
-      <div class="form-footer">
-        <div class="privacy-section">
-          <mat-checkbox formControlName="privacyAccepted" color="primary">
-            {{ 'contact.privacyText' | translate }}
-            <a href="/privacy-policy" target="_blank" class="privacy-link">
-              {{ 'contact.privacyLink' | translate }}
-            </a>
-          </mat-checkbox>
+<section id="contact" class="contact">
+  <div class="contact-container">
+
+    <!-- Header Section -->
+    <div class="contact-header">
+      <!-- Left side - Title + Description -->
+      <div class="contact-title-area">
+        <div class="title-with-arrow">
+          <h2 class="contact-title">Contact me</h2>
+          <!-- Curved Arrow -->
+          <div class="title-arrow">
+            <svg width="80" height="50" viewBox="0 0 80 50" fill="none">
+              <path d="M10 40C25 25 45 15 70 10" stroke="#ff6b35" stroke-width="2" stroke-linecap="round" />
+              <path d="M65 7L70 10L67 15" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
         </div>
-        
-        <button mat-raised-button color="primary" type="submit" 
-                [disabled]="!contactForm.valid || isSubmitting"
-                class="submit-button">
+
+        <p class="contact-description">
+          Encourage people to contact you and describe
+          what role you are interested in. Express
+          interest in contributing to a new project.
+        </p>
+      </div>
+
+      <!-- Right side - Contact Info -->
+      <div class="contact-info">
+        <!-- Up Arrow -->
+        <div class="up-arrow">
+          <svg width="24" height="40" viewBox="0 0 24 40" fill="none">
+            <path d="M12 35L12 5M12 5L6 11M12 5L18 11" stroke="#ff6b35" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <mat-icon class="contact-icon">email</mat-icon>
+            <span class="contact-text">E-mail: mustermail&#64;gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <mat-icon class="contact-icon">phone</mat-icon>
+            <span class="contact-text">Tel: 0157 123 456 68</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+
+      <!-- Form Grid -->
+      <div class="form-grid">
+
+        <!-- Left Column - Name & Email -->
+        <div class="form-left">
+          <!-- Name Field -->
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Your Name</mat-label>
+            <input matInput formControlName="name" placeholder="Your Name" required>
+            <mat-error *ngIf="contactForm.get('name')?.hasError('required')">
+              Name is required
+            </mat-error>
+            <mat-error *ngIf="contactForm.get('name')?.hasError('minlength')">
+              Name must be at least 2 characters
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Email Field -->
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Your Email</mat-label>
+            <input matInput type="email" formControlName="email" placeholder="Your Email" required>
+            <mat-error *ngIf="contactForm.get('email')?.hasError('required')">
+              Email is required
+            </mat-error>
+            <mat-error *ngIf="contactForm.get('email')?.hasError('email')">
+              Please enter a valid email
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <!-- Right Column - Message -->
+        <div class="form-right">
+          <mat-form-field appearance="outline" class="form-field message-field">
+            <mat-label>Your Message</mat-label>
+            <textarea matInput formControlName="message" placeholder="Your Message" rows="6" required></textarea>
+            <mat-error *ngIf="contactForm.get('message')?.hasError('required')">
+              Message is required
+            </mat-error>
+            <mat-error *ngIf="contactForm.get('message')?.hasError('minlength')">
+              Message must be at least 10 characters
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <!-- Form Footer -->
+      <div class="form-footer">
+
+        <!-- Privacy Checkbox -->
+        <div class="privacy-section">
+          <mat-checkbox formControlName="privacyAccepted" color="primary" required>
+            I've read the privacy policy and agree to the processing of my data as outlined.
+          </mat-checkbox>
+          <mat-error
+            *ngIf="contactForm.get('privacyAccepted')?.hasError('required') && contactForm.get('privacyAccepted')?.touched">
+            Please accept the privacy policy
+          </mat-error>
+        </div>
+
+        <!-- Submit Button -->
+        <button mat-raised-button color="primary" type="submit" [disabled]="!contactForm.valid || isSubmitting"
+          class="submit-button">
           <mat-icon *ngIf="isSubmitting">hourglass_empty</mat-icon>
           <mat-icon *ngIf="!isSubmitting">send</mat-icon>
-          {{ isSubmitting ? ('contact.sending' | translate) : ('contact.send' | translate) }}
+          {{ isSubmitting ? 'Sending...' : 'Send' }}
         </button>
+
       </div>
+
     </form>
+
   </div>
 </section>

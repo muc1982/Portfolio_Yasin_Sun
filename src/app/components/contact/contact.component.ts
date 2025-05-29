@@ -1,34 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { TranslateModule } from '@ngx-translate/core';
-import { ContactService } from '../../services/contact.service';
-import { ContactForm } from '../../models/contact';
-import { slideInAnimation } from '../../shared/animations/animations';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   imports: [
-    CommonModule, 
+    CommonModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
     MatCheckboxModule,
     MatIconModule,
-    MatSnackBarModule,
-    TranslateModule
+    MatSnackBarModule
   ],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss',
-  animations: [slideInAnimation]
+  styleUrl: './contact.component.scss'
 })
 export class ContactComponent implements OnInit {
   contactForm!: FormGroup;
@@ -36,7 +30,6 @@ export class ContactComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private contactService: ContactService,
     private snackBar: MatSnackBar
   ) {}
 
@@ -49,7 +42,7 @@ export class ContactComponent implements OnInit {
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required, Validators.minLength(10)]],
-      privacyAccepted: [false, Validators.requiredTrue]
+      privacyAccepted: [false, [Validators.requiredTrue]]
     });
   }
 
@@ -57,47 +50,32 @@ export class ContactComponent implements OnInit {
     if (this.contactForm.valid && !this.isSubmitting) {
       this.isSubmitting = true;
       
-      const formData: ContactForm = this.contactForm.value;
-      
       try {
-        const success = await this.contactService.submitContactForm(formData);
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 2000));
         
-        if (success) {
-          this.snackBar.open('Message sent successfully!', 'Close', {
-            duration: 5000,
-            panelClass: ['success-snackbar']
-          });
-          this.contactForm.reset();
-        } else {
-          throw new Error('Submission failed');
-        }
-      } catch (error) {
-        this.snackBar.open('Failed to send message. Please try again.', 'Close', {
+        this.snackBar.open('Message sent successfully! 🎉', 'Close', {
           duration: 5000,
-          panelClass: ['error-snackbar']
+          panelClass: ['success-snackbar'],
+          horizontalPosition: 'end',
+          verticalPosition: 'top'
+        });
+        
+        this.contactForm.reset();
+        
+      } catch (error) {
+        this.snackBar.open('Failed to send message. Please try again. ❌', 'Close', {
+          duration: 5000,
+          panelClass: ['error-snackbar'],
+          horizontalPosition: 'end',
+          verticalPosition: 'top'
         });
       } finally {
         this.isSubmitting = false;
       }
+    } else {
+      // Mark all fields as touched to show validation errors
+      this.contactForm.markAllAsTouched();
     }
-  }
-
-  getErrorMessage(fieldName: string): string {
-    const field = this.contactForm.get(fieldName);
-    
-    if (field?.hasError('required')) {
-      return `${fieldName} is required`;
-    }
-    
-    if (field?.hasError('email')) {
-      return 'Please enter a valid email address';
-    }
-    
-    if (field?.hasError('minlength')) {
-      const requiredLength = field.errors?.['minlength']?.requiredLength;
-      return `${fieldName} must be at least ${requiredLength} characters long`;
-    }
-    
-    return '';
   }
 }

@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "whyMe": "Warum ich",
+    "skills": "Fähigkeiten", 
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "greeting": "FRONTEND ENTWICKLER",
+    "subtitle": "Marcus Schmidt",
+    "contactButton": "KONTAKT"
+  },
+  "whyMe": {
+    "title": "Warum ich",
+    "description": "Schreiben Sie einige Informationen über sich selbst, die IT-bezogen sind. Vielleicht sind Sie leidenschaftlich am Programmieren? Heben Sie Ihre Motivation für berufliches Wachstum und kontinuierliches Lernen hervor. Erklären Sie Ihre wichtigsten Fähigkeiten und Leidenschaft für das Programmieren.",
+    "iAm": "Ich bin",
+    "located": "ansässig",
+    "inMunich": "in München",
+    "openTo": "offen für",
+    "relocate": "Umzug",
+    "workRemote": "Remote-Arbeit",
+    "letsTalk": "Lass uns reden"
+  },
+  "skills": {
+    "title": "Meine Fähigkeiten",
+    "bottomText": "Ich bin immer bereit, neue Technologien zu erlernen. Sagen Sie mir einfach, was Sie brauchen."
+  },
+  "projects": {
+    "title": "Meine Projekte",
+    "join": {
+      "title": "Join",
+      "description": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+    },
+    "polloLoco": {
+      "title": "Pollo Loco",
+      "description": "Spring-, Lauf- und Wurfspiel basierend auf objektorientiertem Ansatz. Hilf Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+    },
+    "technologies": "Technologien",
+    "github": "GitHub",
+    "liveTest": "Live Test"
+  },
+  "testimonials": {
+    "title": "Brauchen Sie einen Teamplayer? Hier ist, was meine Kollegen über mich gesagt haben",
+    "noah": {
+      "name": "Noah Mueller",
+      "project": "Projekt Sharkie",
+      "quote": "Marcus hatte IQ zu entwickeln, formatieren und liefern Inhalte in Zusammenarbeit mit den Team-Mitgliedern. Er ist eine zuverlässige und freundliche Person."
+    },
+    "evelyn": {
+      "name": "Evelyn Marx", 
+      "project": "Projekt Pollo Loco",
+      "quote": "Er ist ein vertrauenswürdiger Teamkollege und kann mit dem Stress von Deadlines umgehen. Strukturierte Arbeit und sauberer Code."
+    },
+    "james": {
+      "name": "James Rugman",
+      "project": "Projekt Join", 
+      "quote": "Er ist eine zuverlässige und freundliche Person. Die Arbeit ist strukturiert und er schreibt klaren Code. Ich empfehle ihn als Kollegen."
+    }
+  },
+  "contact": {
+    "title": "Kontaktieren Sie mich",
+    "subtitle": "Ermutigen Sie Menschen, Sie zu kontaktieren und beschreiben Sie, welche Rolle Sie interessiert. Drücken Sie Ihr Interesse aus, zu einem neuen Projekt beizutragen.",
+    "name": "Ihr Name",
+    "namePlaceholder": "Ihr Name",
+    "email": "Ihre E-Mail",
+    "emailPlaceholder": "Ihre E-Mail",
+    "message": "Ihre Nachricht", 
+    "messagePlaceholder": "Ihre Nachricht",
+    "privacyText": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "privacyLink": "Datenschutzerklärung",
+    "send": "Senden",
+    "sending": "Wird gesendet...",
+    "emailLabel": "E-Mail: mustermail@gmail.com",
+    "phoneLabel": "Tel: 0157 123 456 68"
+  },
+  "footer": {
+    "developer": "Frontend Entwickler",
+    "copyright": "© Marcus Schmidt 2024",
+    "legalNotice": "Impressum",
+    "privacyPolicy": "Datenschutz"
+  }
+}

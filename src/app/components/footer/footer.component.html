@@ -1,1 +1,50 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Main Footer Content -->
+    <div class="footer-content">
+
+      <!-- Left - Logo -->
+      <div class="footer-left">
+        <div class="logo-section">
+          <div class="logo">&lt;YS&gt;</div>
+          <div class="logo-subtitle">Frontend Developer</div>
+        </div>
+      </div>
+
+      <!-- Center - Copyright -->
+      <div class="footer-center">
+        <p class="copyright-text">© Yasin Sun 2025</p>
+
+        <!-- Legal Links unter Copyright -->
+        <div class="legal-links">
+          <button mat-button class="legal-link" (click)="openLink('/legal-notice')">
+            Legal notice
+          </button>
+          <span class="separator">|</span>
+          <button mat-button class="legal-link" (click)="openLink('/privacy-policy')">
+            privacy policy
+          </button>
+        </div>
+      </div>
+
+      <!-- Right - Social Icons -->
+      <div class="footer-right">
+        <div class="social-buttons">
+          <button mat-icon-button class="social-btn github" (click)="openLink('https://github.com')">
+            <mat-icon svgIcon="github" class="custom-icon"></mat-icon>
+          </button>
+          <button mat-icon-button class="social-btn youtube" (click)="openLink('https://youtube.com')">
+            <mat-icon class="custom-icon">play_circle</mat-icon>
+          </button>
+          <button mat-icon-button class="social-btn linkedin"
+            (click)="openLink('https://linkedin.com')">
+            <mat-icon class="custom-icon">business</mat-icon>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
