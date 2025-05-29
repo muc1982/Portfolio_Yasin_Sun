@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod && firebase deploy"
+    "deploy": "ng build --configuration production && firebase deploy"
   },
   "dependencies": {
     "@angular/animations": "^19.2.0",
@@ -17,6 +17,7 @@
     "@angular/common": "^19.2.0",
     "@angular/compiler": "^19.2.0",
     "@angular/core": "^19.2.0",
+    "@angular/fire": "^18.0.0",
     "@angular/forms": "^19.2.0",
     "@angular/material": "^19.2.0",
     "@angular/platform-browser": "^19.2.0",
@@ -24,6 +25,7 @@
     "@angular/router": "^19.2.0",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
+    "firebase": "^10.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.0"

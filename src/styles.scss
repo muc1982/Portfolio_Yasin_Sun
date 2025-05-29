@@ -1,14 +1,13 @@
-// ===== STYLES.SCSS - DIREKT IM SRC ORDNER =====
-// Datei: src/styles.scss (NICHT src/styles/styles.scss!)
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Handjet:wght@400&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
-// ===== VARIABLES =====
-$primary-bg: #1e1b4b;
+$primary-bg: rgba(18, 11, 53, 1);
 $secondary-bg: #2d2a5a;
-$accent-orange: #ff6b35;
-$accent-cyan: #00d9ff;
+$accent-orange: #E15544;
+$accent-cyan: #02F4BF;
 $text-primary: rgba(255, 255, 255, 0.9);
 $text-secondary: rgba(255, 255, 255, 0.7);
 $text-light: rgba(255, 255, 255, 0.6);
@@ -27,19 +26,15 @@ $desktop: 1200px;
 
 // ===== BODY & HTML =====
 html, body {
-  font-family: 'Inter', sans-serif;
   line-height: 1.6;
   color: $text-primary;
-  background: $primary-bg;
+  background: rgba(18, 11, 53, 1);
   min-height: 100vh;
   overflow-x: hidden;
 }
 
 // ===== TYPOGRAPHY =====
 h1, .h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: $text-primary;
   
   @media (max-width: $mobile) {
     font-size: 2rem;
@@ -47,9 +42,6 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: $text-primary;
   
   @media (max-width: $mobile) {
     font-size: 1.8rem;
@@ -57,26 +49,12 @@ h2, .h2 {
 }
 
 h3, .h3 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: $text-primary;
   
   @media (max-width: $mobile) {
     font-size: 1.5rem;
   }
 }
 
-h4, .h4 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: $text-primary;
-}
-
-h5, .h5 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: $text-primary;
-}
 
 p, .paragraph {
   font-size: 1rem;

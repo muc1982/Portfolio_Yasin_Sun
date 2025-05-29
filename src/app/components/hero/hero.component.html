@@ -1,30 +1,31 @@
 <section class="hero">
   <div class="hero-container">
-    <!-- Left Side - Contact Button (ganz links, vertikal) -->
+    <!-- Left Side - Button oben, Text darunter -->
     <div class="hero-left">
       <button class="contact-button" (click)="scrollToContact()">
         CONTACT ME
       </button>
+
+      <!-- Text Content unter dem Button -->
+      <div class="hero-content-area">
+        <h1 class="hero-title">FRONTEND DEVELOPER</h1>
+        <h2 class="hero-name">Yasin Sun</h2>
+      </div>
     </div>
-    
-    <!-- Center-Left - Main Text Content -->
-    <div class="hero-content-area">
-      <h1 class="hero-title">FRONTEND DEVELOPER</h1>
-      <h2 class="hero-name">Yasin Sun</h2> <!-- ✅ Name geändert -->
-    </div>
-    
-    <!-- Center - Arrow -->
-    <div class="hero-arrow">
-      <svg width="24" height="60" viewBox="0 0 24 60" fill="none">
-        <path d="M12 5L12 50M12 50L6 44M12 50L18 44" stroke="#00d9ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
-    
+
     <!-- Right Side - Profile Image -->
     <div class="hero-right">
       <div class="profile-image">
-        <img src="assets/images/profile.jpg" alt="Yasin Sun"/> 
+        <img src="assets/images/profile.jpg" alt="Yasin Sun" />
       </div>
+    </div>
+
+    <!-- Center - Arrow (absolut positioniert) -->
+    <div class="hero-arrow">
+      <svg width="24" height="60" viewBox="0 0 24 60" fill="none">
+        <path d="M12 5L12 50M12 50L6 44M12 50L18 44" stroke="#E15544" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
     </div>
   </div>
 </section>

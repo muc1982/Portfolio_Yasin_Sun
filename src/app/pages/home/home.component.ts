@@ -74,8 +74,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   private updateMetaTags(): void {
     if (typeof document !== 'undefined') {
       const title = this.currentLanguage === 'de' 
-        ? 'Marcus Schmidt - Frontend Developer | Angular & TypeScript' 
-        : 'Marcus Schmidt - Frontend Developer | Angular & TypeScript';
+        ? 'Yasin Sun - Frontend Developer | Angular & TypeScript' 
+        : 'Yasin Sun - Frontend Developer | Angular & TypeScript';
       
       const description = this.currentLanguage === 'de'
         ? 'Frontend Developer in München spezialisiert auf Angular, TypeScript und moderne Webtechnologien. Portfolio mit Projekten und Kontaktmöglichkeiten.'

@@ -21,10 +21,8 @@ export class FooterComponent {
 
   openLink(url: string): void {
     if (url.startsWith('http')) {
-      // External links
       window.open(url, '_blank', 'noopener,noreferrer');
     } else {
-      // Internal routes
       this.router.navigate([url]);
     }
   }

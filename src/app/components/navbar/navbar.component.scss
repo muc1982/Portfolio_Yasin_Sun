@@ -6,7 +6,9 @@
   background: #1e1b4b;
   z-index: 1000;
   padding: 0.8rem 0;
-  
+  cursor: pointer;
+
+
   .navbar-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -14,69 +16,68 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     @media (max-width: 768px) {
       padding: 0 1rem;
     }
   }
-  
-  // Logo - Ganz links positioniert
+
   .logo {
-    flex: 0 0 auto; // Feste Breite, kein Wachsen/Schrumpfen
-    
+    flex: 0 0 auto;
+
+
     .logo-link {
-      font-size: 24px;
-      font-weight: 700;
-      color: #ff6b35;
+      font-size: 48px;
+      font-weight: 400;
+      color: #E15544;
       text-decoration: none;
-      font-family: 'Courier New', monospace;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-      
-      &:hover {
-        color: #ff8c5a;
-        text-shadow: 0 0 8px rgba(255, 107, 53, 0.6);
-      }
+      font-family: 'Handjet', monospace;
+      letter-spacing: 5%;
+      text-transform: uppercase;
+      line-height: 100%;
+
     }
   }
-  
-  // Navigation - Perfekt zentriert mit mehr Abstand zum Logo
+
   .nav-links {
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 32px;
     margin: 0;
     padding: 0;
-    flex: 1; // Nimmt verfügbaren Platz ein
-    justify-content: center; // Zentriert die Links
-    margin-left: 4rem; // ✅ MEHR ABSTAND ZUM LOGO
-    
+    flex: 1;
+    justify-content: center;
+    margin-left: -26rem;
+
     @media (max-width: 1024px) {
-      margin-left: 2rem; // Weniger Abstand auf Tablet
+      margin-left: 2rem;
     }
-    
+
     @media (max-width: 768px) {
       display: none;
       margin-left: 0;
     }
-    
+
     .nav-link {
-      color: rgba(255, 255, 255, 0.8);
+      color: #E15544;
       text-decoration: none;
-      font-weight: 400;
-      font-size: 16px;
       cursor: pointer;
       transition: all 0.3s ease;
       padding: 0.5rem 0;
       position: relative;
-      white-space: nowrap; // Verhindert Zeilenumbruch
-      
+      white-space: nowrap;
+      font-family: Roboto Mono;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 120%;
+      letter-spacing: 0%;
+
       &:hover {
-        color: #00d9ff;
+        color: #02F4BF;
+        ;
         transform: translateY(-1px);
       }
-      
-      // Underline-Animation
+
       &:after {
         content: '';
         position: absolute;
@@ -84,50 +85,48 @@
         left: 0;
         width: 0;
         height: 2px;
-        background: #00d9ff;
+        background: #02F4BF;
         transition: width 0.3s ease;
       }
-      
+
       &:hover:after {
         width: 100%;
       }
     }
   }
-  
-  // Language Toggle - Ganz rechts positioniert
+
   .language-toggle {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    flex: 0 0 auto; // Feste Breite, kein Wachsen/Schrumpfen
-    
+    flex: 0 0 auto;
+
     .lang-option {
-      color: rgba(255, 255, 255, 0.6);
+      color: #E15544;
       cursor: pointer;
-      font-size: 14px;
-      font-weight: 500;
       transition: all 0.3s ease;
       padding: 0.3rem 0.5rem;
       border-radius: 4px;
-      min-width: 28px; // Feste Mindestbreite
+      min-width: 28px;
       text-align: center;
-      
+      font-family: Roboto Mono;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 140%;
+      letter-spacing: 0%;
+
+
       &:hover {
-        color: rgba(255, 255, 255, 0.9);
-        background: rgba(255, 255, 255, 0.1);
+        color: #E15544;
       }
-      
+
       &.active {
-        color: #00d9ff;
-        font-weight: 600;
-        background: rgba(0, 217, 255, 0.1);
+        color: #02F4BF;
       }
     }
-    
+
     .separator {
-      color: rgba(255, 255, 255, 0.4);
-      font-size: 14px;
-      margin: 0 0.2rem;
+      color: #E15544;
+      font-size: 18px;
     }
   }
 }
@@ -139,7 +138,7 @@
       display: flex;
       flex-direction: column;
       cursor: pointer;
-      
+
       span {
         width: 25px;
         height: 3px;

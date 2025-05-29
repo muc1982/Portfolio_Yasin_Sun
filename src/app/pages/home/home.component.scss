@@ -10,7 +10,6 @@
   scroll-behavior: smooth;
 }
 
-// DEBUG: Testimonials direkt in Home Component
 .testimonials-debug {
   background: #1e1b4b;
   padding: 100px 0;
@@ -306,8 +305,6 @@
   }
 }
 
-// ===== PRIVACY-POLICY.COMPONENT.SCSS FIX =====
-// Datei: src/app/pages/privacy-policy/privacy-policy.component.scss
 .legal-page {
   background: #1e1b4b;
   min-height: 100vh;

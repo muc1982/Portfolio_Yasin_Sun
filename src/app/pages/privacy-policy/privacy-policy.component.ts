@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatIconModule],
   templateUrl: './privacy-policy.component.html',
-  styleUrl: './privacy-policy.component.scss' // ✅ Korrekte Endung
+  styleUrl: './privacy-policy.component.scss', 
 })
 export class PrivacyPolicyComponent {
   currentDate = new Date();

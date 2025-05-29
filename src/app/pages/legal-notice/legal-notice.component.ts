@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatIconModule],
   templateUrl: './legal-notice.component.html',
-  styleUrl: './legal-notice.component.scss' // ✅ Korrekte Endung
+  styleUrl: './legal-notice.component.scss', // Änderung: .css zu .scss
 })
 export class LegalNoticeComponent {
   currentDate = new Date();
